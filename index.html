@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">My Book Collection</h1>
+    </header>
+    <main>
+        <div class="addBook">
+            <form id="bookForm" name="bookForm" class="myBooks">
+                <div class="input-div title-div">
+                    <input type="text" id="title" name="title" maxlength="100" placeholder="title"><br>
+                </div>
+                <p class="error">Title must be at least 2 characters</p>
+                <div class="input-div author-div">
+                    <input type="text" id="author" name="author" maxlength="100" placeholder="author"><br>
+                </div>
+                <p class="error">Author must be at least 2 characters</p>                
+                <div class="input-div pages-div">
+                    <input type="number" id="pages" name="pages"  placeholder="pages"><br>
+                </div>
+                <p class="error">Pages must be between 1-9999</p>      
+                
+                <p>Have you read it?</p>
+                <input type="radio" id="yes" name="finished" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="finished" value="no">
+                <label for="no">No</label>
+                <br>
+                <input type="submit" value="Submit">
+              </form> 
+        </div>
+
+        <div class="showBooks">
+            <table id="myTable">                
+                    <tr id="tableHeader">
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Finished</th>
+                    </tr>              
+
+            </table>
+        </div>
+    </main>
+</body>
+</html>

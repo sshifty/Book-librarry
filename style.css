@@ -1,0 +1,109 @@
+*, *:before, *:after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f2dfc4;
+}
+
+header{
+    text-align: center;
+    padding:20px;
+    margin-bottom: 20px;
+}
+
+main{
+    display:flex;
+}
+
+
+
+.addBook{
+    padding:10px;
+    padding-top: 0px;
+    flex:1;
+}
+
+.myBooks *{
+    margin:10px;
+    
+    
+}
+
+.input-div{     
+    background-color: white;  
+    border: 1px solid red;
+    margin: 5px 10px 5px 10px;
+    padding: 10px 10px 10px 5px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+input[type=text],
+input[type=number]{    
+    margin:0px;
+    padding:10px;
+    width:100%;
+    border:none;
+    outline:none;
+}
+input[type=submit]{
+    background-color:#8ad45f;
+    outline: none;
+    padding:10px 50px;
+    border:1px solid #478a20;    
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    
+}
+input[type=submit]:hover{
+    background-color: rgba(138, 212, 95,0.4);
+}
+.showBooks{
+    align-self: flex-start;    
+    flex:2;
+    border-left: 2px solid #DBD0C0;
+}
+#myTable{
+    width:100%;
+    text-align: center;
+}
+#myTable *{
+    padding:10px;
+}
+
+#myTable tr:nth-child(odd){
+    background-color: #F9CF93;    
+}
+#myTable tr:nth-child(even){
+    background-color:#FAEEE0;
+}
+    
+
+#myTable #tableHeader{
+    background-color: #DBD0C0;
+}
+
+.deleteButton{    
+    background:#FF5C58;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+
+.invalid{
+    border:1px solid red;
+}
+.error{
+    color:red;
+    display:none;
+}
