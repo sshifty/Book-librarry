@@ -99,7 +99,7 @@ function listBooks() {
             buttonCell.classList.add("deleteButton");
             buttonCell.textContent = "Delete";
             changeCell.setAttribute("value", myLibrary.indexOf(book));
-            changeCell.classList.add("deleteButton");
+            changeCell.classList.add("changeButton");
             changeCell.textContent = "Status";
     
     
@@ -138,7 +138,7 @@ function addBookToLibrary(e){
         buttonCell.setAttribute("value",myLibrary.indexOf(newBook));
         buttonCell.classList.add("deleteButton"); 
         changeCell.setAttribute("value",myLibrary.indexOf(newBook));
-        changeCell.classList.add("deleteButton");
+        changeCell.classList.add("changeButton");
         changeCell.textContent="Status";
         newBook.pages=parseInt(newBook.pages)
         let row= document.createElement('tr');    
