@@ -24,7 +24,65 @@ class Book{//constructor
     }    
 }
 
-function validation(){
+function showError(type,index){
+    
+   if(type.name==="pages"){
+       console.log(type.validity)
+       console.log("sad")
+       if(type.validity.rangeUnderflow){
+           console.log("XD")
+        errorP[index].textContent = `${type.name} should be at between ${type.min} and ${type.max} characters; you entered ${ type.value }.`;
+       }else if(type.validity.rageOverFlow){
+           console.log(type.value)
+       }
+   }
+    if(type.validity.valueMissing) {
+        
+        errorP[index].textContent = 'You need to enter an e-mail address.';
+      }else if(type.validity.tooShort) {
+        // If the data is too short,
+        // display the following error message.
+        errorP[index].textContent = `${type.name} should be at least ${ type.minLength } characters; you entered ${ type.value.length }.`;
+      }
+    
+      // Set the styling appropriately
+      errorP[index].style.display='block';
+    }
+
+
+title.addEventListener("input",(e)=>{
+    if(title.validity.valid){
+        authorDiv.style.border="";
+        errorP[0].style.display='none'
+    }
+    if(title.validity.tooShort){        
+        showError(title,0)
+    }
+});
+
+author.addEventListener("input",e=>{
+    if(author.validity.valid){
+        authorDiv.style.border="";
+        errorP[1].style.display='none'
+    }
+    if(author.validity.tooShort){        
+        showError(author,1)
+    }
+})
+
+pages.addEventListener("input",e=>{
+    if(pages.validity.valid){
+        
+        pagesDiv.style.border="";
+        errorP[2].style.display='none'
+    }
+    if(!pages.validity.valid){   
+        
+        showError(pages,2)
+    }
+})
+
+function validation(){    
     let valid=true;    
     if(title.value<2){  
         valid=false;     
@@ -46,7 +104,7 @@ function validation(){
         authorDiv.style.border="";
     }
     
-    if(parseInt(pages.value)<1 || parseInt(pages.value)>9999 || !parseInt(pages.value)){
+    if(parseInt(pages.value)<5 || parseInt(pages.value)>9999 || !parseInt(pages.value)){
         valid=false;
         pagesDiv.style.border="1px solid red";
         errorP[2].style.display='block';

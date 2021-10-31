@@ -16,17 +16,17 @@
         <div class="addBook">
             <form id="bookForm" name="bookForm" class="myBooks">
                 <div class="input-div title-div">
-                    <input type="text" id="title" name="title" maxlength="100" placeholder="title"><br>
+                    <input type="text" id="title" name="title" minlength="2" maxlength="100" placeholder="title"><br>
                 </div>
                 <p class="error">Title must be at least 2 characters</p>
                 <div class="input-div author-div">
-                    <input type="text" id="author" name="author" maxlength="100" placeholder="author"><br>
+                    <input type="text" id="author" name="author" minlength="2" maxlength="100" placeholder="author"><br>
                 </div>
                 <p class="error">Author must be at least 2 characters</p>                
                 <div class="input-div pages-div">
-                    <input type="number" id="pages" name="pages"  placeholder="pages"><br>
+                    <input type="number" id="pages" min="10" max="999" name="pages"  placeholder="pages"><br>
                 </div>
-                <p class="error">Pages must be between 1-9999</p>      
+                <p class="error">Pages must be between 10-9999</p>      
                 
                 <p>Have you read it?</p>
                 <input type="radio" id="yes" name="finished" value="yes">
